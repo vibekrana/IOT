@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -226.97, "left": -118.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 65.9, "left": -278.6, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -95.8, "left": 268.8, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -22.6,
+      "left": -230.4,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "uno:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "uno:5V", "green", [ "v0" ] ],
+    [ "lcd1:V0", "uno:GND.2", "green", [ "v0" ] ],
+    [ "lcd1:RS", "uno:7", "green", [ "v0" ] ],
+    [ "lcd1:RW", "uno:5", "green", [ "v0" ] ],
+    [ "lcd1:E", "uno:8", "green", [ "v0" ] ],
+    [ "lcd1:D4", "uno:9", "green", [ "v0" ] ],
+    [ "lcd1:D5", "uno:10", "green", [ "v0" ] ],
+    [ "lcd1:D6", "uno:11", "green", [ "v0" ] ],
+    [ "lcd1:D7", "uno:12", "green", [ "v0" ] ],
+    [ "lcd1:A", "uno:5V", "green", [ "v0" ] ],
+    [ "lcd1:K", "uno:GND.3", "green", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "relay1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "relay1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "relay1:IN", "uno:3", "green", [ "h0" ] ],
+    [ "btn1:1.l", "uno:4", "green", [ "h0" ] ],
+    [ "btn1:2.r", "uno:GND.3", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
